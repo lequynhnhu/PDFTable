@@ -17,7 +17,7 @@
  * USA.
  */
 /**
- * @author pmo
- *
+ * @author pmo (peter.mosseveld@gmail.com)
+ * 
  */
 package nl.mossoft.PDFTable.main;
