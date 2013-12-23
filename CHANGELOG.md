@@ -1,0 +1,6 @@
+
+v0.0.0
+2013-12-23:  Update package info                                     (pmo)
+2013-12-23:  Small change                                            (mossie)
+2013-12-23:  Add license to package.java                             (pmo)
+2013-12-23:  Initial Commit of base classes                          (mossie)

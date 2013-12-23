@@ -17,7 +17,8 @@
  * USA.
  */
 /**
- * @author pmo (peter.mosseveld@gmail.com)
+ * Contains the classes of the library.
  * 
+ * @author Mossie <mossie@MosSoft.nl> 
  */
 package nl.mossoft.PDFTable.main;
