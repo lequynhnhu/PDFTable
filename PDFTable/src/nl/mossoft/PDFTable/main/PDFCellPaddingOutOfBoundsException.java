@@ -18,35 +18,25 @@
  */
 package nl.mossoft.PDFTable.main;
 
-/**
- * The Class PDFTableTextCell.
- * 
- * This class represents a cell in a table that contains text content.
- */
-public class PDFTableTextCell extends PDFTableCell {
-
-  private final String text;
-
-  private final float textWidth;
+public class PDFCellPaddingOutOfBoundsException extends Exception {
 
   /**
-   * Instantiates a new PDFTableCell containing text.
    * 
-   * @param pRow the row
-   * @param pColumn the column
-   * @param pText the text
    */
-  public PDFTableTextCell(
-      final int pRow,
-      final int pColumn,
-      final String pText) {
-    super(pRow, pColumn);
+  private static final long serialVersionUID = -9002186954804985298L;
 
-    this.text = pText;
-    this.textWidth = 0;
+  PDFCellPaddingOutOfBoundsException() {
+  }
 
-    setCellWidth(this.textWidth);
-
+  /**
+   * Instantiates a new PDFCellPaddingOutOfBounds exception.
+   * 
+   * Padding value should be zero or positive
+   * 
+   * @param pMessage the message
+   */
+  PDFCellPaddingOutOfBoundsException(String pMessage) {
+    super(pMessage);
   }
 
 }

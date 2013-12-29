@@ -29,19 +29,32 @@ public class PDFTableRow {
   /** The PDFCells in the PDFTableRow. */
   private final List<PDFTableCell> cells;
 
+  /** the row number in the PDFTable */
+  private final int row;
+
   /**
    * Instantiates a new PDFTableRow.
    */
-  public PDFTableRow() {
+  public PDFTableRow(int pRow) {
+    this.row = pRow;
     this.cells = new ArrayList<PDFTableCell>();
   }
 
   /**
-   * Adds a PDFTableCell to the row.
+   * Adds a PDFTableCell to the PDFTableRow.
    * 
    * @param cell the PDFTableCell
    */
-  void addCell(final PDFTableCell cell) {
-    this.cells.add(cell);
+  void addCell(final PDFTableCell pCell) {
+    this.cells.add(pCell.getColumn(), pCell);
+  }
+
+  /**
+   * Gets the row number.
+   * 
+   * @return the row
+   */
+  public int getRow() {
+    return this.row;
   }
 }
