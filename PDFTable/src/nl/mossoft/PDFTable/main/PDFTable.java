@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 Mossie <mossie@MosSoft.nl>
+ * Copyright (C) pmossie <peter.mosseveld@gmail.com>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,6 +28,9 @@ import java.util.List;
  */
 public class PDFTable {
 
+  /**
+   * Auto format table.
+   */
   private static void autoFormatTable() {
 
   }
@@ -50,7 +53,7 @@ public class PDFTable {
    * @param pColumnSize the column size
    * @param pRowSize the row size
    */
-  public PDFTable(int pColumnSize, int pRowSize) {
+  public PDFTable(final int pColumnSize, final int pRowSize) {
     this.columnSize = pColumnSize;
     this.rowSize = pRowSize;
 
@@ -63,7 +66,7 @@ public class PDFTable {
    * 
    * @param pRow the row
    */
-  public void addRow(PDFTableRow pRow) {
+  public final void addRow(final PDFTableRow pRow) {
     this.rows.add(pRow.getRow(), pRow);
   }
 
@@ -72,7 +75,7 @@ public class PDFTable {
    * 
    * @return the number of columns.
    */
-  public int getColumnSize() {
+  public final int getColumnSize() {
     return this.columnSize;
   }
 
@@ -82,7 +85,7 @@ public class PDFTable {
    * @param pIndex the index
    * @return the columnWidths
    */
-  public Float getColumnWidth(int pIndex) {
+  public final Float getColumnWidth(final int pIndex) {
     return this.columnWidths.get(pIndex);
   }
 
@@ -92,7 +95,7 @@ public class PDFTable {
    * @param pIndex the index
    * @return the row
    */
-  public PDFTableRow getRow(int pIndex) {
+  public final PDFTableRow getRow(final int pIndex) {
     return this.rows.get(pIndex);
   }
 
@@ -101,7 +104,7 @@ public class PDFTable {
    * 
    * @return the number of rows.
    */
-  public int getRowSize() {
+  public final int getRowSize() {
     return this.rowSize;
   }
 

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 Mossie <mossie@MosSoft.nl>
+ * Copyright (C) pmossie <peter.mosseveld@gmail.com>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,13 +18,17 @@
  */
 package nl.mossoft.PDFTable.main;
 
+/**
+ * The Class PDFCellPaddingOutOfBoundsException.
+ */
 public class PDFCellPaddingOutOfBoundsException extends Exception {
 
-  /**
-   * 
-   */
+  /** The Constant serialVersionUID. */
   private static final long serialVersionUID = -9002186954804985298L;
 
+  /**
+   * Instantiates a new pDF cell padding out of bounds exception.
+   */
   PDFCellPaddingOutOfBoundsException() {
   }
 
@@ -35,7 +39,7 @@ public class PDFCellPaddingOutOfBoundsException extends Exception {
    * 
    * @param pMessage the message
    */
-  PDFCellPaddingOutOfBoundsException(String pMessage) {
+  PDFCellPaddingOutOfBoundsException(final String pMessage) {
     super(pMessage);
   }
 

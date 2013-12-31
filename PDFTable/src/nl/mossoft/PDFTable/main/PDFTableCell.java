@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 Mossie <mossie@MosSoft.nl>
+ * Copyright (C) pmossie <peter.mosseveld@gmail.com>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,12 +23,6 @@ package nl.mossoft.PDFTable.main;
  */
 public class PDFTableCell {
 
-  /** The column. */
-  private final int column;
-
-  /** The row. */
-  private final int row;
-
   /** The cell height. */
   private float cellHeight = 0f;
 
@@ -38,8 +32,14 @@ public class PDFTableCell {
   /** The colSpan. */
   private int colSpan = 1;
 
+  /** The column. */
+  private final int column;
+
   /** The heading. */
   private boolean heading = false;
+
+  /** The row. */
+  private final int row;
 
   /**
    * Instantiates a new PDFTableCell.
@@ -127,7 +127,7 @@ public class PDFTableCell {
   /**
    * Sets the colspan.
    * 
-   * @param pColspan the new colspan
+   * @param pColSpan the new col span
    */
   public final void setColSpan(final int pColSpan) {
     this.colSpan = pColSpan;
@@ -140,30 +140,6 @@ public class PDFTableCell {
    */
   public final void setHeading(final boolean pHeading) {
     this.heading = pHeading;
-  }
-
-  /*
-   * (non-Javadoc)
-   * 
-   * @see java.lang.Object#toString()
-   */
-  @Override
-  public String toString() {
-    StringBuilder builder = new StringBuilder();
-    builder.append("PDFTableCell [column=");
-    builder.append(getColumn());
-    builder.append(", row=");
-    builder.append(getRow());
-    builder.append(", cellHeight=");
-    builder.append(getCellHeight());
-    builder.append(", CellWidth=");
-    builder.append(getCellWidth());
-    builder.append(", colSpan=");
-    builder.append(getColSpan());
-    builder.append(", isHeading=");
-    builder.append(isHeading());
-    builder.append("]");
-    return builder.toString();
   }
 
 }
