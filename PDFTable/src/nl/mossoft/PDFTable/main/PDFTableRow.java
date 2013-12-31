@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 Mossie <mossie@MosSoft.nl>
+ * Copyright (C) pmossie <peter.mosseveld@gmail.com>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,23 +29,26 @@ public class PDFTableRow {
   /** The PDFCells in the PDFTableRow. */
   private final List<PDFTableCell> cells;
 
-  /** the row number in the PDFTable */
+  /** the row number in the PDFTable. */
   private final int row;
 
   /**
-   * Instantiates a new PDFTableRow.
-   */
-  public PDFTableRow(int pRow) {
+	 * Instantiates a new PDFTableRow.
+	 * 
+	 * @param pRow
+	 *            the row
+	 */
+  public PDFTableRow(final int pRow) {
     this.row = pRow;
     this.cells = new ArrayList<PDFTableCell>();
   }
 
   /**
    * Adds a PDFTableCell to the PDFTableRow.
-   * 
-   * @param cell the PDFTableCell
+   *
+   * @param pCell the cell
    */
-  void addCell(final PDFTableCell pCell) {
+  final void addCell(final PDFTableCell pCell) {
     this.cells.add(pCell.getColumn(), pCell);
   }
 
@@ -54,7 +57,7 @@ public class PDFTableRow {
    * 
    * @return the row
    */
-  public int getRow() {
+  public final int getRow() {
     return this.row;
   }
 }

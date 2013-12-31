@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 Mossie <mossie@MosSoft.nl>
+ * Copyright (C) pmossie <peter.mosseveld@gmail.com>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,15 +18,20 @@
  */
 package nl.mossoft.PDFTable.main;
 
+/**
+ * The Class PDFCellPadding.
+ */
 public class PDFCellPadding {
 
+  /** The value. */
   private float value = 0.0f;
 
   /**
    * Instantiates a new PDFCellPadding.
    * 
    * @param pValue the value
-   * @throws PDFCellPaddingOutOfBoundsException
+   * @throws PDFCellPaddingOutOfBoundsException the padding out of
+   *           bounds exception
    */
   public PDFCellPadding(final float pValue)
       throws PDFCellPaddingOutOfBoundsException {
@@ -42,7 +47,7 @@ public class PDFCellPadding {
    * 
    * @return the value
    */
-  public float getValue() {
+  public final float getValue() {
     return this.value;
   }
 
@@ -50,10 +55,10 @@ public class PDFCellPadding {
    * Sets the padding value.
    * 
    * @param pValue the new value
-   * @throws PDFCellPaddingOutOfBoundsException the pDF cell padding out
-   *           of bounds exception
+   * @throws PDFCellPaddingOutOfBoundsException the padding out of
+   *           bounds exception
    */
-  public void setValue(float pValue)
+  public final void setValue(final float pValue)
       throws PDFCellPaddingOutOfBoundsException {
     if (pValue >= 0.0f) {
       this.value = pValue;

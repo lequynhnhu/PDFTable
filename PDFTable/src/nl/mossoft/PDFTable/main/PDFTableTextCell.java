@@ -18,6 +18,7 @@
  */
 package nl.mossoft.PDFTable.main;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class PDFTableTextCell.
  * 
@@ -25,8 +26,10 @@ package nl.mossoft.PDFTable.main;
  */
 public class PDFTableTextCell extends PDFTableCell {
 
+  /** The text. */
   private final String text;
 
+  /** The text width. */
   private final float textWidth;
 
   /**
@@ -46,7 +49,50 @@ public class PDFTableTextCell extends PDFTableCell {
     this.textWidth = 0;
 
     setCellWidth(this.textWidth);
+  }
 
+  /**
+   * Gets the text.
+   * 
+   * @return the text
+   */
+  public final String getText() {
+    return this.text;
+  }
+
+  /**
+   * Gets the text width.
+   * 
+   * @return the text width
+   */
+  public final float getTextWidth() {
+    return this.textWidth;
+  }
+
+  /*
+   * (non-Javadoc)
+   * 
+   * @see java.lang.Object#toString()
+   */
+  @Override
+  public final String toString() {
+    final StringBuilder builder = new StringBuilder();
+    builder.append("PDFTableCellText [column=");
+    builder.append(getColumn());
+    builder.append(", row=");
+    builder.append(getRow());
+    builder.append(", cellHeight=");
+    builder.append(getCellHeight());
+    builder.append(", CellWidth=");
+    builder.append(getCellWidth());
+    builder.append(", colSpan=");
+    builder.append(getColSpan());
+    builder.append(", isHeading=");
+    builder.append(isHeading());
+    builder.append(", text=");
+    builder.append(getText());
+    builder.append("]");
+    return builder.toString();
   }
 
 }

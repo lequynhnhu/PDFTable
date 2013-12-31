@@ -1,5 +1,6 @@
 
 v0.0.0
+2014-01-02:  Further work on the core classes                        (pmo)
 2013-12-29:  Extending base clases                                   (mossie)
 2013-12-23:  Update package info                                     (pmo)
 2013-12-23:  Small change                                            (mossie)

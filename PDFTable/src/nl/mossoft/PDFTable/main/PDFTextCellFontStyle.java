@@ -18,29 +18,24 @@
  */
 package nl.mossoft.PDFTable.main;
 
+import org.pdfclown.documents.contents.fonts.StandardType1Font;
+
 /**
- * The Class PDFCellPaddingOutOfBoundsException.
+ * The Class PDFTextCellFontStyle.
  */
-public class PDFCellPaddingOutOfBoundsException extends Exception {
+public class PDFTextCellFontStyle {
 
-  /** The Constant serialVersionUID. */
-  private static final long serialVersionUID = -9002186954804985298L;
+  /** The family. */
+  private final StandardType1Font.FamilyEnum family;
 
-  /**
-   * Instantiates a new pDF cell padding out of bounds exception.
-   */
-  PDFCellPaddingOutOfBoundsException() {
-  }
+  /** The fontsize. */
+  private final float fontsize;
 
   /**
-   * Instantiates a new PDFCellPaddingOutOfBounds exception.
-   * 
-   * Padding value should be zero or positive
-   * 
-   * @param pMessage the message
+   * Instantiates a new PDFTextCellFontStyle.
    */
-  PDFCellPaddingOutOfBoundsException(final String pMessage) {
-    super(pMessage);
+  public PDFTextCellFontStyle() {
+    this.family = StandardType1Font.FamilyEnum.Helvetica;
+    this.fontsize = 10.0f;
   }
-
 }
