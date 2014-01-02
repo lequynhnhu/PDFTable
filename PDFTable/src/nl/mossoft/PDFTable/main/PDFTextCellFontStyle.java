@@ -1,5 +1,5 @@
 /*
- * Copyright (C) pmossie <peter.mosseveld@gmail.com>
+ * Copyright (C) 2014 Mossie <mossie@MosSoft.nl>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,17 +25,87 @@ import org.pdfclown.documents.contents.fonts.StandardType1Font;
  */
 public class PDFTextCellFontStyle {
 
-  /** The family. */
-  private final StandardType1Font.FamilyEnum family;
+  /** The Constant DEFAULT_FONT_FAMILY. */
+  private static final StandardType1Font.FamilyEnum DEFAULT_FONT_FAMILY =
+      StandardType1Font.FamilyEnum.Helvetica;
 
-  /** The fontsize. */
-  private final float fontsize;
+  /** The Constant DEFAULT_FONTSIZE. */
+  private static final float DEFAULT_FONTSIZE = 10.0F;
+
+  /** The fontFamily. */
+  private StandardType1Font.FamilyEnum fontFamily;
+
+  /** The fontSize. */
+  private float fontSize;
 
   /**
-   * Instantiates a new PDFTextCellFontStyle.
+   * Instantiates a new PDFTextCellFontStyle using default font family
+   * and default fontsize.
    */
   public PDFTextCellFontStyle() {
-    this.family = StandardType1Font.FamilyEnum.Helvetica;
-    this.fontsize = 10.0f;
+    this.fontFamily = DEFAULT_FONT_FAMILY;
+    this.fontSize = DEFAULT_FONTSIZE;
+  }
+
+  /**
+   * Instantiates a new PDFTextCellFontStyle using default font family
+   * and custom fontsize.
+   * 
+   * @param pFontSize the fontSize
+   */
+  public PDFTextCellFontStyle(final float pFontSize) {
+    this.fontFamily = DEFAULT_FONT_FAMILY;
+    this.fontSize = pFontSize;
+  }
+
+  /**
+   * Instantiates a new PDFTextCellFontStyle using custom font family
+   * and custom fontsize.
+   * 
+   * @param pFontFamily the font family
+   * @param pFontSize the fontsize
+   */
+  public PDFTextCellFontStyle(
+      final StandardType1Font.FamilyEnum pFontFamily,
+      final float pFontSize) {
+    this.fontFamily = pFontFamily;
+    this.fontSize = pFontSize;
+  }
+
+  /**
+   * Gets the font family.
+   * 
+   * @return the font family
+   */
+  public final StandardType1Font.FamilyEnum getFontFamily() {
+    return this.fontFamily;
+  }
+
+  /**
+   * Gets the fontsize.
+   * 
+   * @return the fontSize
+   */
+  public final float getFontSize() {
+    return this.fontSize;
+  }
+
+  /**
+   * Sets the font family.
+   * 
+   * @param pFontFamily the new font family
+   */
+  public final void setFontFamily(
+      final StandardType1Font.FamilyEnum pFontFamily) {
+    this.fontFamily = pFontFamily;
+  }
+
+  /**
+   * Sets the fontsize.
+   * 
+   * @param pFontsize the new fontsize
+   */
+  public final void setFontSize(final float pFontsize) {
+    this.fontSize = pFontsize;
   }
 }
