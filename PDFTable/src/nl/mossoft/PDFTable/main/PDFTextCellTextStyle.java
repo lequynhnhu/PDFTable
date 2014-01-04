@@ -21,51 +21,51 @@ package nl.mossoft.PDFTable.main;
 import org.pdfclown.documents.contents.fonts.StandardType1Font;
 
 /**
- * The Class PDFTextCellFontStyle.
+ * The Class PDFTextCellTextStyle.
  */
-public class PDFTextCellFontStyle {
+public class PDFTextCellTextStyle {
 
-  /** The Constant DEFAULT_FONT_FAMILY. */
+  /** The default font family. */
   private static final StandardType1Font.FamilyEnum DEFAULT_FONT_FAMILY =
       StandardType1Font.FamilyEnum.Helvetica;
 
-  /** The Constant DEFAULT_FONTSIZE. */
+  /** The default fontsize. */
   private static final float DEFAULT_FONTSIZE = 10.0F;
 
-  /** The fontFamily. */
+  /** The font family. */
   private StandardType1Font.FamilyEnum fontFamily;
 
   /** The fontSize. */
   private float fontSize;
 
   /**
-   * Instantiates a new PDFTextCellFontStyle using default font family
-   * and default fontsize.
+   * Instantiates a new PDFTextCellTextStyle using the default font
+   * family and the default fontsize.
    */
-  public PDFTextCellFontStyle() {
+  public PDFTextCellTextStyle() {
     this.fontFamily = DEFAULT_FONT_FAMILY;
     this.fontSize = DEFAULT_FONTSIZE;
   }
 
   /**
-   * Instantiates a new PDFTextCellFontStyle using default font family
-   * and custom fontsize.
+   * Instantiates a new PDFTextCellTextStyle using the default font
+   * family and a custom fontsize.
    * 
    * @param pFontSize the fontSize
    */
-  public PDFTextCellFontStyle(final float pFontSize) {
+  public PDFTextCellTextStyle(final float pFontSize) {
     this.fontFamily = DEFAULT_FONT_FAMILY;
     this.fontSize = pFontSize;
   }
 
   /**
-   * Instantiates a new PDFTextCellFontStyle using custom font family
-   * and custom fontsize.
+   * Instantiates a new PDFTextCellTextStyle using a custom font family
+   * and a custom fontsize.
    * 
    * @param pFontFamily the font family
    * @param pFontSize the fontsize
    */
-  public PDFTextCellFontStyle(
+  public PDFTextCellTextStyle(
       final StandardType1Font.FamilyEnum pFontFamily,
       final float pFontSize) {
     this.fontFamily = pFontFamily;

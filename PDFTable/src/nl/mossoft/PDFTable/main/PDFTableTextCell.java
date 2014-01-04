@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 Mossie <mossie@MosSoft.nl>
+ * Copyright (C) 2014 Mossie <mossie@MosSoft.nl>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,11 +18,8 @@
  */
 package nl.mossoft.PDFTable.main;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class PDFTableTextCell.
- * 
- * This class represents a cell in a table that contains text content.
  */
 public class PDFTableTextCell extends PDFTableCell {
 
@@ -32,8 +29,11 @@ public class PDFTableTextCell extends PDFTableCell {
   /** The text width. */
   private final float textWidth;
 
+  /** The font style. */
+  private PDFTextCellTextStyle textStyle;
+
   /**
-   * Instantiates a new PDFTableCell containing text.
+   * Instantiates a new pDF table text cell.
    * 
    * @param pRow the row
    * @param pColumn the column
@@ -61,6 +61,15 @@ public class PDFTableTextCell extends PDFTableCell {
   }
 
   /**
+   * Get text style.
+   * 
+   * @return the textStyle
+   */
+  public final PDFTextCellTextStyle getTextStyle() {
+    return this.textStyle;
+  }
+
+  /**
    * Gets the text width.
    * 
    * @return the text width
@@ -69,30 +78,13 @@ public class PDFTableTextCell extends PDFTableCell {
     return this.textWidth;
   }
 
-  /*
-   * (non-Javadoc)
+  /**
+   * Sets the text style
    * 
-   * @see java.lang.Object#toString()
+   * @param pTextStyle the textStyle to set
    */
-  @Override
-  public final String toString() {
-    final StringBuilder builder = new StringBuilder();
-    builder.append("PDFTableCellText [column=");
-    builder.append(getColumn());
-    builder.append(", row=");
-    builder.append(getRow());
-    builder.append(", cellHeight=");
-    builder.append(getCellHeight());
-    builder.append(", CellWidth=");
-    builder.append(getCellWidth());
-    builder.append(", colSpan=");
-    builder.append(getColSpan());
-    builder.append(", isHeading=");
-    builder.append(isHeading());
-    builder.append(", text=");
-    builder.append(getText());
-    builder.append("]");
-    return builder.toString();
+  public void setTextStyle(final PDFTextCellTextStyle pTextStyle) {
+    this.textStyle = pTextStyle;
   }
 
 }
