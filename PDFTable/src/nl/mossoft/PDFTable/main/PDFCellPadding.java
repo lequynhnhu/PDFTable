@@ -24,7 +24,17 @@ package nl.mossoft.PDFTable.main;
 public class PDFCellPadding {
 
   /** The value. */
-  private float value = 0.0f;
+  private float value;
+
+  /** The default padding. */
+  private static final float DEFAULT_PADDING = 0.0f;
+
+  /**
+   * Instantiates a new PDFCellPadding.
+   */
+  public PDFCellPadding() {
+    this.value = PDFCellPadding.DEFAULT_PADDING;
+  }
 
   /**
    * Instantiates a new PDFCellPadding.
@@ -35,7 +45,7 @@ public class PDFCellPadding {
    */
   public PDFCellPadding(final float pValue)
       throws PDFCellPaddingOutOfBoundsException {
-    if (pValue >= 0.0f) {
+    if (pValue >= PDFCellPadding.DEFAULT_PADDING) {
       this.value = pValue;
     } else {
       throw new PDFCellPaddingOutOfBoundsException();

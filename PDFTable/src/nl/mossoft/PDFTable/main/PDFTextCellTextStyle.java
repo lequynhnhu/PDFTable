@@ -18,6 +18,8 @@
  */
 package nl.mossoft.PDFTable.main;
 
+import org.pdfclown.documents.contents.composition.XAlignmentEnum;
+import org.pdfclown.documents.contents.composition.YAlignmentEnum;
 import org.pdfclown.documents.contents.fonts.StandardType1Font;
 
 /**
@@ -25,51 +27,70 @@ import org.pdfclown.documents.contents.fonts.StandardType1Font;
  */
 public class PDFTextCellTextStyle {
 
-  /** The default font family. */
+  /** The Constant DEFAULT_FONT_FAMILY. */
   private static final StandardType1Font.FamilyEnum DEFAULT_FONT_FAMILY =
       StandardType1Font.FamilyEnum.Helvetica;
 
-  /** The default fontsize. */
+  /** The Constant DEFAULT_FONTSIZE. */
   private static final float DEFAULT_FONTSIZE = 10.0F;
+
+  /** The default xalignment. */
+  private static final XAlignmentEnum DEFAULT_XALIGNMENT =
+      XAlignmentEnum.Left;
+
+  /** The default yalignment. */
+  private static final YAlignmentEnum DEFAULT_YALIGNMENT =
+      YAlignmentEnum.Middle;
 
   /** The font family. */
   private StandardType1Font.FamilyEnum fontFamily;
 
-  /** The fontSize. */
+  /** The font size. */
   private float fontSize;
 
+  /** The x alignment. */
+  private XAlignmentEnum xAlignment;
+
+  /** The y alignment. */
+  private YAlignmentEnum yAlignment;
+
   /**
-   * Instantiates a new PDFTextCellTextStyle using the default font
-   * family and the default fontsize.
+   * Instantiates a new PDFTextCellTextStyle with default settings.
    */
   public PDFTextCellTextStyle() {
     this.fontFamily = DEFAULT_FONT_FAMILY;
     this.fontSize = DEFAULT_FONTSIZE;
+    this.xAlignment = DEFAULT_XALIGNMENT;
+    this.yAlignment = DEFAULT_YALIGNMENT;
   }
 
   /**
-   * Instantiates a new PDFTextCellTextStyle using the default font
-   * family and a custom fontsize.
+   * Instantiates a new PDFTextCellTextStyle with defaults and custom
+   * fontsize.
    * 
-   * @param pFontSize the fontSize
+   * @param pFontSize the font size
    */
   public PDFTextCellTextStyle(final float pFontSize) {
     this.fontFamily = DEFAULT_FONT_FAMILY;
     this.fontSize = pFontSize;
+    this.xAlignment = DEFAULT_XALIGNMENT;
+    this.yAlignment = DEFAULT_YALIGNMENT;
   }
 
   /**
-   * Instantiates a new PDFTextCellTextStyle using a custom font family
-   * and a custom fontsize.
+   * Instantiates a new PDFTextCellTextStyle with defaults and custom
+   * font family and fontsize.
    * 
    * @param pFontFamily the font family
-   * @param pFontSize the fontsize
+   * @param pFontSize the font size
    */
   public PDFTextCellTextStyle(
       final StandardType1Font.FamilyEnum pFontFamily,
       final float pFontSize) {
     this.fontFamily = pFontFamily;
     this.fontSize = pFontSize;
+    this.xAlignment = DEFAULT_XALIGNMENT;
+    this.yAlignment = DEFAULT_YALIGNMENT;
   }
 
   /**
@@ -82,12 +103,30 @@ public class PDFTextCellTextStyle {
   }
 
   /**
-   * Gets the fontsize.
+   * Gets the font size.
    * 
-   * @return the fontSize
+   * @return the font size
    */
   public final float getFontSize() {
     return this.fontSize;
+  }
+
+  /**
+   * Gets the x alignment.
+   * 
+   * @return the xAlignment
+   */
+  public final XAlignmentEnum getXAlignment() {
+    return this.xAlignment;
+  }
+
+  /**
+   * Gets the y alignment.
+   * 
+   * @return the yAlignment
+   */
+  public final YAlignmentEnum getYAlignment() {
+    return this.yAlignment;
   }
 
   /**
@@ -101,11 +140,25 @@ public class PDFTextCellTextStyle {
   }
 
   /**
-   * Sets the fontsize.
+   * Sets the font size.
    * 
-   * @param pFontsize the new fontsize
+   * @param pFontsize the new font size
    */
   public final void setFontSize(final float pFontsize) {
     this.fontSize = pFontsize;
+  }
+
+  /**
+   * @param pXAlignment the xAlignment to set
+   */
+  public final void setXAlignment(final XAlignmentEnum pXAlignment) {
+    this.xAlignment = pXAlignment;
+  }
+
+  /**
+   * @param pYAlignment the yAlignment to set
+   */
+  public final void setYAlignment(final YAlignmentEnum pYAlignment) {
+    this.yAlignment = pYAlignment;
   }
 }

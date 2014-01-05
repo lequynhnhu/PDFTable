@@ -18,6 +18,7 @@
  */
 package nl.mossoft.PDFTable.main;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class PDFTableCell.
  */
@@ -38,6 +39,18 @@ public class PDFTableCell {
   /** The heading. */
   private boolean heading = false;
 
+  /** The padding bottom. */
+  private final PDFCellPadding paddingBottom;
+
+  /** The padding left. */
+  private final PDFCellPadding paddingLeft;
+
+  /** The padding right. */
+  private final PDFCellPadding paddingRight;
+
+  /** The padding top. */
+  private final PDFCellPadding paddingTop;
+
   /** The row. */
   private final int row;
 
@@ -50,6 +63,12 @@ public class PDFTableCell {
   public PDFTableCell(final int pRow, final int pColumn) {
     this.column = pColumn;
     this.row = pRow;
+
+    this.paddingBottom = new PDFCellPadding();
+    this.paddingLeft = new PDFCellPadding();
+    this.paddingRight = new PDFCellPadding();
+    this.paddingTop = new PDFCellPadding();
+
   }
 
   /**
@@ -86,6 +105,42 @@ public class PDFTableCell {
    */
   public final int getColumn() {
     return this.column;
+  }
+
+  /**
+   * Gets the padding bottom.
+   * 
+   * @return the paddingBottom
+   */
+  public final PDFCellPadding getPaddingBottom() {
+    return this.paddingBottom;
+  }
+
+  /**
+   * Gets the padding left.
+   * 
+   * @return the paddingLeft
+   */
+  public final PDFCellPadding getPaddingLeft() {
+    return this.paddingLeft;
+  }
+
+  /**
+   * Gets the padding right.
+   * 
+   * @return the paddingRight
+   */
+  public final PDFCellPadding getPaddingRight() {
+    return this.paddingRight;
+  }
+
+  /**
+   * Gets the padding top.
+   * 
+   * @return the paddingTop
+   */
+  public final PDFCellPadding getPaddingTop() {
+    return this.paddingTop;
   }
 
   /**

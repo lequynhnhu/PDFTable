@@ -79,11 +79,11 @@ public class PDFTableTextCell extends PDFTableCell {
   }
 
   /**
-   * Sets the text style
+   * Sets the text style.
    * 
    * @param pTextStyle the textStyle to set
    */
-  public void setTextStyle(final PDFTextCellTextStyle pTextStyle) {
+  public final void setTextStyle(final PDFTextCellTextStyle pTextStyle) {
     this.textStyle = pTextStyle;
   }
 
