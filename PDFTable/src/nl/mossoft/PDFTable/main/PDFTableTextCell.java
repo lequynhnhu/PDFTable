@@ -30,10 +30,25 @@ public class PDFTableTextCell extends PDFTableCell {
   private final float textWidth;
 
   /** The font style. */
-  private PDFTextCellTextStyle textStyle;
+  private PDFTableTextCellTextStyle textStyle;
 
   /**
-   * Instantiates a new pDF table text cell.
+   * Instantiates a new PDFTableTextCell.
+   * 
+   * @param pRow the row
+   * @param pColumn the column
+   */
+  public PDFTableTextCell(final int pRow, final int pColumn) {
+    super(pRow, pColumn);
+
+    this.text = "";
+    this.textWidth = 0;
+
+    setCellWidth(this.textWidth);
+  }
+
+  /**
+   * Instantiates a new PDFTableTextCell.
    * 
    * @param pRow the row
    * @param pColumn the column
@@ -65,7 +80,7 @@ public class PDFTableTextCell extends PDFTableCell {
    * 
    * @return the textStyle
    */
-  public final PDFTextCellTextStyle getTextStyle() {
+  public final PDFTableTextCellTextStyle getTextStyle() {
     return this.textStyle;
   }
 
@@ -83,7 +98,7 @@ public class PDFTableTextCell extends PDFTableCell {
    * 
    * @param pTextStyle the textStyle to set
    */
-  public final void setTextStyle(final PDFTextCellTextStyle pTextStyle) {
+  public final void setTextStyle(final PDFTableTextCellTextStyle pTextStyle) {
     this.textStyle = pTextStyle;
   }
 

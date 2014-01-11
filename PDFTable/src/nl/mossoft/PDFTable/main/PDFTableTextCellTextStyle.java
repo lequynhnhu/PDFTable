@@ -23,9 +23,9 @@ import org.pdfclown.documents.contents.composition.YAlignmentEnum;
 import org.pdfclown.documents.contents.fonts.StandardType1Font;
 
 /**
- * The Class PDFTextCellTextStyle.
+ * The Class PDFTableTextCellTextStyle.
  */
-public class PDFTextCellTextStyle {
+public class PDFTableTextCellTextStyle {
 
   /** The Constant DEFAULT_FONT_FAMILY. */
   private static final StandardType1Font.FamilyEnum DEFAULT_FONT_FAMILY =
@@ -55,9 +55,9 @@ public class PDFTextCellTextStyle {
   private YAlignmentEnum yAlignment;
 
   /**
-   * Instantiates a new PDFTextCellTextStyle with default settings.
+   * Instantiates a new PDFTableTextCellTextStyle with default settings.
    */
-  public PDFTextCellTextStyle() {
+  public PDFTableTextCellTextStyle() {
     this.fontFamily = DEFAULT_FONT_FAMILY;
     this.fontSize = DEFAULT_FONTSIZE;
     this.xAlignment = DEFAULT_XALIGNMENT;
@@ -65,12 +65,12 @@ public class PDFTextCellTextStyle {
   }
 
   /**
-   * Instantiates a new PDFTextCellTextStyle with defaults and custom
+   * Instantiates a new PDFTableTextCellTextStyle with defaults and custom
    * fontsize.
    * 
    * @param pFontSize the font size
    */
-  public PDFTextCellTextStyle(final float pFontSize) {
+  public PDFTableTextCellTextStyle(final float pFontSize) {
     this.fontFamily = DEFAULT_FONT_FAMILY;
     this.fontSize = pFontSize;
     this.xAlignment = DEFAULT_XALIGNMENT;
@@ -78,13 +78,13 @@ public class PDFTextCellTextStyle {
   }
 
   /**
-   * Instantiates a new PDFTextCellTextStyle with defaults and custom
+   * Instantiates a new PDFTableTextCellTextStyle with defaults and custom
    * font family and fontsize.
    * 
    * @param pFontFamily the font family
    * @param pFontSize the font size
    */
-  public PDFTextCellTextStyle(
+  public PDFTableTextCellTextStyle(
       final StandardType1Font.FamilyEnum pFontFamily,
       final float pFontSize) {
     this.fontFamily = pFontFamily;

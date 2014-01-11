@@ -1,5 +1,5 @@
 /*
- * Copyright (C) pmossie <peter.mosseveld@gmail.com>
+ * Copyright (C) 2014 Mossie <mossie@MosSoft.nl>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,28 +19,18 @@
 package nl.mossoft.PDFTable.main;
 
 /**
- * The Class PDFCellPaddingOutOfBoundsException.
+ * The Enum PDFTableCellType.
+ * 
+ * Different types of PDFTableCell
  */
-public class PDFCellPaddingOutOfBoundsException extends Exception {
+public enum PDFTableCellType {
 
-  /** The Constant serialVersionUID. */
-  private static final long serialVersionUID = -9002186954804985298L;
+  /** Cell that contains an amount. */
+  AMOUNT,
 
-  /**
-   * Instantiates a new PDFCellPaddingOutOfBoundsException.
-   */
-  PDFCellPaddingOutOfBoundsException() {
-  }
+  /** Cell that contains a date. */
+  DATE,
 
-  /**
-   * Instantiates a new PDFCellPaddingOutOfBoundsException.
-   * 
-   * Padding value should be zero or positive
-   * 
-   * @param pMessage the message
-   */
-  PDFCellPaddingOutOfBoundsException(final String pMessage) {
-    super(pMessage);
-  }
-
+  /** Cell that contains a text. */
+  TEXT
 }
