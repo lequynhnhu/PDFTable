@@ -19,6 +19,6 @@
 /**
  * Contains the test classes of the library.
  * 
- * @author Mossie <mossie@MosSoft.nl>
+ * @author Mossie mossie@MosSoft.nl
  */
 package nl.mossoft.PDFTable.test;
