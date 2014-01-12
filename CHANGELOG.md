@@ -1,6 +1,7 @@
 
 v0.0.0
 2014-01-12:  Added PDFTableCellFactory, refractored and updated ot.. (mossie)
+2014-01-11:  Added PDFTableCellFactory, refractored and updated ot.. (mossie)
 2014-01-05:  add javadocs                                            (mossie)
 2014-01-04:  Modified PDFTextCellTextStyle.                          (mossie)
 2014-01-02:  Enhanced PDFTextCellFontStyle                           (mossie)

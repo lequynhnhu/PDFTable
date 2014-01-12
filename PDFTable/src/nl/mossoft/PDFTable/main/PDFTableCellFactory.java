@@ -24,7 +24,11 @@ package nl.mossoft.PDFTable.main;
 public class PDFTableCellFactory {
 
   /**
+<<<<<<< HEAD
    * Gets an instance of a PDFTableCell.
+=======
+   * Gets an instance of PDFTableCell.
+>>>>>>> 5e87f8a17e6f7022978be734c4a7784cd04d0f76
    * 
    * @param pRow the row
    * @param pColumn the column
@@ -41,9 +45,12 @@ public class PDFTableCellFactory {
 
     PDFTableCell cell = null;
     switch (pCellType) {
+<<<<<<< HEAD
       case AMOUNT:
         cell = new PDFTableAmountCell(pRow, pColumn);
         break;
+=======
+>>>>>>> 5e87f8a17e6f7022978be734c4a7784cd04d0f76
       case TEXT:
         cell = new PDFTableTextCell(pRow, pColumn);
         break;
